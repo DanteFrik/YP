@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список продуктов</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+</head>
+<body>
+<h1>Список всех продуктов</h1>
+<ul>
+    <th:block th:each="product : ${products}">
+        <li>
+            <a th:href="@{/products/{id}(id=${product.id})}" th:text="${product.name}"></a>
+        </li>
+    </th:block>
+</ul>
+<a href="/products/new">Добавить новый продукт</a>
+<a href="/">На главную</a>
+
+
+</body>
+</html>

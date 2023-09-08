@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Все люди</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+</head>
+<body>
+<h1>Список всех людей</h1>
+<ul>
+    <th:block th:each="person : ${people}">
+        <li>
+            <a th:href="@{people/{id}(id=${person.id})}" th:text="${person.name}"></a>
+        </li>
+    </th:block>
+</ul>
+<a href="people/new">Добавить нового человека</a>
+<a href="/">На главную</a>
+
+</body>
+</html>

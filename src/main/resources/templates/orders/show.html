@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Просмотр заказа</title>
+</head>
+<body>
+<div class="container">
+    <h1>Просмотр заказа</h1>
+    <p><strong>Номер заказа:</strong> <span th:text="${order.getOrderNumber()}"></span></p>
+    <p><strong>Общая стоимость:</strong> <span th:text="${order.getTotalPrice()}"></span></p>
+    <p><strong>Имя заказчика:</strong> <span th:text="${order.getCustomerName()}"></span></p>
+    <a href="/orders">Назад к списку заказов</a>
+</div>
+</body>
+</html>

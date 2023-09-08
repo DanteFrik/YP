@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактировать информацию о продукте</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+</head>
+<body>
+<h1>Редактировать информацию о продукте</h1>
+<form th:method="POST" th:action="@{/products/{id}(id=${product.id})}" th:object="${product}">
+    <label for="name">Название:</label>
+    <input type="text" id="name" th:field="*{name}" required>
+
+    <label for="price">Цена:</label>
+    <input type="number" id="price" th:field="*{price}" required>
+
+    <label for="description">Описание:</label>
+    <textarea id="description" th:field="*{description}" required></textarea>
+
+    <button type="submit">Сохранить</button>
+</form>
+<a th:href="@{/products/{id}(id=${product.id})}" class="btn">Отмена</a>
+</body>
+</html>

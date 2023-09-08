@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация о продукте</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+</head>
+<body>
+<h1>Информация о продукте</h1>
+<p>Название: <span th:text="${product.name}"></span></p>
+<p>Цена: <span th:text="${product.price}"></span></p>
+<p>Описание: <span th:text="${product.description}"></span></p>
+<a th:href="@{/products}" class="btn">Назад к списку продуктов</a>
+</body>
+</html>
